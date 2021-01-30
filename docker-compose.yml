@@ -14,7 +14,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./docker/database/data:/var/lib/mysql
+      - db:/var/lib/mysql
 
   php:
     build:
@@ -40,3 +40,7 @@ services:
       - php
     ports:
       - "80:80"
+
+volumes:
+  db:
+    driver: local
