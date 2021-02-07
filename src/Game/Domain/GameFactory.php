@@ -2,7 +2,12 @@
 
 namespace App\Game\Domain;
 
-abstract class GameFactory
+use App\Common\Domain\Identity;
+
+class GameFactory
 {
-    public abstract function createGame(): Game;
+    public function createGame(Identity $userId, string $gameType): Game
+    {
+
+    }
 }

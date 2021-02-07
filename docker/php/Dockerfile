@@ -1,6 +1,6 @@
 # docker/php-fpm/Dockerfile
 
-FROM php:fpm-alpine
+FROM php:8-fpm-alpine
 COPY wait-for-it.sh /usr/bin/wait-for-it
 RUN chmod +x /usr/bin/wait-for-it
 RUN apk --update --no-cache add git bash
