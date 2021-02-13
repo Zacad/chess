@@ -10,13 +10,19 @@ final class Game
 
     private GameType $gameType;
 
-    public function __construct(GameType $gameType)
+    public function __construct(Identity $usedId, GameType $gameType)
     {
         $this->gameType = $gameType;
+        $this->creator = $usedId;
+        $this->addPlayer($usedId);
     }
 
     public function gameType(): string
     {
         return $this->gameType->gameName();
+    }
+
+    public function addPlayer(Identity $usedId)
+    {
     }
 }

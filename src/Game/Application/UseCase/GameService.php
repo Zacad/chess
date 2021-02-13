@@ -21,12 +21,11 @@ class GameService
         private GameRepository $gameRepository) {
     }
 
-    public function create(string $userId, string $gameType): void
+    public function create(string $playerId, string $gameType): void
     {
-        $userId = new Identity(UUID::fromString($userId));
+        $playerId = new Identity(UUID::fromString($playerId));
         $gameType = $this->gameTypeFactory->fromName($gameType);
-        $game = $this->gameCreationService->newGame($userId, $gameType);
-        $this->gameRepository->save($game);
+        $this->gameCreationService->newGame($playerId, $gameType);
     }
 
 

@@ -8,6 +8,6 @@ use App\Common\Domain\Identity;
 interface PlayerRepository
 {
 
-    public function userOfId(Identity $userId): Player;
+    public function playerOfId(Identity $playerId): Player;
 
 }
