@@ -5,16 +5,13 @@ namespace App\Game\Domain;
 class GameCreationService
 {
 
-    private GameFactory $gameFactory;
     private PlayerRepository $playerRepository;
     private GameRepository $gameRepository;
 
     public function __construct(
-        GameFactory $gameFactory,
         PlayerRepository $playerRepository,
         GameRepository $gameRepository
     ) {
-        $this->gameFactory = $gameFactory;
         $this->playerRepository = $playerRepository;
         $this->gameRepository = $gameRepository;
     }
